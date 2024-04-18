@@ -1,0 +1,18 @@
+.tabs__nav {
+  display: flex;
+}
+.tabs__btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #e6bb27;
+}
+.tabs__btn--active {
+  background-color: #e6bb27;
+}
+.tabs__item {
+  display: none;
+}
+.tabs__item--active {
+  display: block;
+}/*# sourceMappingURL=tabs.css.map */

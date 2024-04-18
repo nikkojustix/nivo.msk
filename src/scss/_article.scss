@@ -1,0 +1,103 @@
+.article {
+  margin-bottom: 80px;
+  &__date {
+    color: var(--color-primary);
+    font-size: 13px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  &__img {
+    float: left;
+    max-width: 50%;
+    min-width: 200px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+    * {
+      margin: 0 0 20px;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+    p {
+      line-height: 1.4;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    h6 {
+      font-size: 16px;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      position: relative;
+      padding-left: 26px;
+      display: flex;
+      margin: 0 0 10px;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        background-image: url('@img/checkmark.svg');
+        background-size: cover;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+
+    svg path {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+      svg path {
+        fill: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .article__links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .article__link:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

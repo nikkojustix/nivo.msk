@@ -1,0 +1,300 @@
+.accordion {
+  margin-bottom: 80px;
+  &__item {
+    border: 1px solid var(--color-primary);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--active {
+      & > .accordion__content {
+        padding: 15px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__select {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__trigger {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px;
+    display: flex;
+    border-color: transparent;
+    z-index: 1;
+    box-sizing: border-box;
+
+    &[aria-expanded='true'] {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      .accordion__arrow {
+        &::before,
+        &::after {
+          background-color: var(--color-white);
+        }
+        &::before {
+          transform: rotate(-45deg);
+        }
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+      .accordion__trigger-num {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+      }
+    }
+
+    &[aria-expanded='false'] {
+      background-color: transparent;
+      color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+    }
+
+    &:hover {
+      .accordion__arrow {
+        &::before,
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+      .accordion__trigger-num {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__trigger-num {
+    margin-left: auto;
+    padding: 3px 7px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  &__content {
+    box-sizing: content-box;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+    will-change: max-height;
+  }
+
+  &__arrow {
+    position: relative;
+    width: 16px;
+    align-self: stretch;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: var(--color-primary);
+      transition: 0.3s;
+    }
+    &::before {
+      transform: rotate(45deg);
+      left: 0;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid var(--color-gray);
+    background-color: var(--color-lighter);
+    box-sizing: border-box;
+    transition: 0.3s;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background-color: var(--color-light);
+    }
+  }
+  &__link-size {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  &__lang-box {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+    // flex-wrap: nowrap;
+  }
+
+  &__lang {
+    background-position: 0 -1172px;
+    min-width: 22px;
+    height: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url('@img/languages.png');
+  }
+
+  &__lang[lang='ar'] {
+    background-position: 0 -484px;
+  }
+  &__lang[lang='be'] {
+    background-position: 0 -500px;
+  }
+  &__lang[lang='bg'] {
+    background-position: 0 -516px;
+  }
+  &__lang[lang='cs'] {
+    background-position: 0 -532px;
+  }
+  &__lang[lang='da'] {
+    background-position: 0 -548px;
+  }
+  &__lang[lang='de'] {
+    background-position: 0 -564px;
+  }
+  &__lang[lang='el'] {
+    background-position: 0 -580px;
+  }
+  &__lang[lang='en'] {
+    background-position: 0 -596px;
+  }
+  &__lang[lang='es'] {
+    background-position: 0 -612px;
+  }
+  &__lang[lang='et'] {
+    background-position: 0 -628px;
+  }
+  &__lang[lang='fi'] {
+    background-position: 0 -644px;
+  }
+  &__lang[lang='fr'] {
+    background-position: 0 -660px;
+  }
+  &__lang[lang='ga'] {
+    background-position: 0 -676px;
+  }
+  &__lang[lang='hi'] {
+    background-position: 0 -692px;
+  }
+  &__lang[lang='hr'] {
+    background-position: 0 -708px;
+  }
+  &__lang[lang='hu'] {
+    background-position: 0 -724px;
+  }
+  &__lang[lang='in'] {
+    background-position: 0 -740px;
+  }
+  &__lang[lang='is'] {
+    background-position: 0 -756px;
+  }
+  &__lang[lang='it'] {
+    background-position: 0 -772px;
+  }
+  &__lang[lang='iw'] {
+    background-position: 0 -788px;
+  }
+  &__lang[lang='ja'] {
+    background-position: 0 -804px;
+  }
+  &__lang[lang='ko'] {
+    background-position: 0 -820px;
+  }
+  &__lang[lang='lt'] {
+    background-position: 0 -836px;
+  }
+  &__lang[lang='lv'] {
+    background-position: 0 -852px;
+  }
+  &__lang[lang='mk'] {
+    background-position: 0 -868px;
+  }
+  &__lang[lang='ms'] {
+    background-position: 0 -884px;
+  }
+  &__lang[lang='mt'] {
+    background-position: 0 -900px;
+  }
+  &__lang[lang='nl'] {
+    background-position: 0 -916px;
+  }
+  &__lang[lang='no'] {
+    background-position: 0 -932px;
+  }
+  &__lang[lang='pl'] {
+    background-position: 0 -948px;
+  }
+  &__lang[lang='pt'] {
+    background-position: 0 -964px;
+  }
+  &__lang[lang='ro'] {
+    background-position: 0 -980px;
+  }
+  &__lang[lang='ru'] {
+    background-position: 0 -996px;
+  }
+  &__lang[lang='sk'] {
+    background-position: 0 -1012px;
+  }
+  &__lang[lang='sl'] {
+    background-position: 0 -1028px;
+  }
+  &__lang[lang='sq'] {
+    background-position: 0 -1044px;
+  }
+  &__lang[lang='sr'] {
+    background-position: 0 -1060px;
+  }
+  &__lang[lang='sv'] {
+    background-position: 0 -1076px;
+  }
+  &__lang[lang='th'] {
+    background-position: 0 -1092px;
+  }
+  &__lang[lang='tr'] {
+    background-position: 0 -1108px;
+  }
+  &__lang[lang='uk'] {
+    background-position: 0 -1124px;
+  }
+  &__lang[lang='vi'] {
+    background-position: 0 -1140px;
+  }
+  &__lang[lang='zh'] {
+    background-position: 0 -1156px;
+  }
+}

@@ -1,0 +1,30 @@
+.scroll-to-top {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: $color-white;
+  background: radial-gradient(circle, rgba($color-white, 1) 0%, rgba($color-white, 0) 100%);
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+
+  svg {
+    width: 37px;
+    height: 37px;
+    fill: $color-primary;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background: radial-gradient(circle, rgba($color-white, 1) 40%, rgba($color-white, 0) 100%);
+
+    svg {
+      fill: $color-primary-dark;
+    }
+  }
+}

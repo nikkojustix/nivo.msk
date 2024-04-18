@@ -1,0 +1,32 @@
+//modal
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: none;
+
+  &__inner {
+    padding: 25px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: $color-white;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

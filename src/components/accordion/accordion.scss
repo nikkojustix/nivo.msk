@@ -1,0 +1,33 @@
+.accordion {
+  &__item {
+    border-bottom: 1px solid #c4c4c4;
+
+    &--active {
+      .accordion__content {
+        display: block;
+      }
+    }
+  }
+
+  &__trigger {
+  }
+
+  &__content {
+    padding-bottom: 20px;
+    display: none;
+    animation: fade 0.3s ease;
+  }
+
+  &__content-text {
+    margin-top: 25px;
+    padding-left: 35px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.line1 {
+}
+.line2 {
+}
