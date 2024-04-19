@@ -43,6 +43,14 @@ dropBtns.forEach((dropBtn) => {
 
 document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
+const footerItemTitles = document.querySelectorAll('.footer__item-title');
+footerItemTitles.forEach((title) => {
+  title.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('footer__item-title--active');
+    e.currentTarget.nextElementSibling.classList.toggle('footer__menu--active');
+  });
+});
+
 let topSliderImg, topSliderTitle;
 
 if (document.querySelector('.top__slider-img') != null && document.querySelector('.top__slider-title') != null) {

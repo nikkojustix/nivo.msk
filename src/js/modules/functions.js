@@ -17,10 +17,10 @@ export function toggleMobileMenu(e) {
   e.preventDefault();
   const menu = document.querySelector('.menu');
   const btnInner = document.querySelector('.burger__btn-inner');
-  const wrapper = document.querySelector('.wrapper');
+  const body = document.querySelector('body');
   menu.classList.toggle('menu--active');
   btnInner.classList.toggle('burger__btn-inner--active');
-  wrapper.classList.toggle('locked');
+  body.classList.toggle('locked');
 }
 
 export function tabs(btnClass, itemClass, activeModifire) {

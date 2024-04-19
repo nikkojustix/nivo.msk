@@ -9,10 +9,12 @@
 
   --color-primary: #6c8db5;
   --color-primary-light: #8aabd3;
+  --color-primary-light--rgb: 138, 171, 211;
   --color-primary-dark: #4e6f97;
 
   --color-secondary: #ee7054;
   --color-secondary-light: #ff8e72;
+  --color-secondary-light--rgb: 255, 142, 114;
   --color-secondary-dark: #d05236;
 
   --color-error: #f04438;
@@ -123,10 +125,10 @@ a {
   }
 
   &__title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
-    font-family: 'Jost', sans-serif;
-    text-transform: uppercase;
+    // font-family: 'Jost', sans-serif;
+    // text-transform: uppercase;
     margin: 0 0 40px;
     text-align: center;
     &--in-row {
@@ -197,6 +199,7 @@ a {
   padding: 12px 24px;
   margin: 0;
   border: 1px solid transparent;
+  border-radius: 50px;
   color: var(--color-white);
   background-color: var(--color-primary);
   text-decoration: none;

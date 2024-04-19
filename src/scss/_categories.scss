@@ -1,0 +1,52 @@
+.categories {
+  &__btn {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 40px;
+    border-radius: 40px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    &:nth-child(odd) {
+      background-color: rgba(var(--color-secondary-light--rgb), 0.6);
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--color-secondary);
+          box-shadow: var(--shadow);
+        }
+      }
+    }
+    &:nth-child(even) {
+      background-color: rgba(var(--color-primary-light--rgb), 0.6);
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--color-primary);
+          box-shadow: var(--shadow);
+        }
+      }
+    }
+  }
+
+  &__item-title {
+    max-width: 220px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+
+  &__item-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
