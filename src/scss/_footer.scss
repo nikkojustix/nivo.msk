@@ -103,6 +103,14 @@
       grid-template-columns: 1fr;
     }
 
+    &__logo {
+      max-width: 150px;
+    }
+
+    &__copy {
+      margin: 24px 0 10px;
+    }
+
     &__map {
       grid-column: auto;
     }

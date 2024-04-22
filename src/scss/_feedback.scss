@@ -1,0 +1,13 @@
+.feedback {
+  &__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .feedback {
+    &__form-row {
+      flex-direction: column;
+    }
+  }
+}

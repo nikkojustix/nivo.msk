@@ -1,6 +1,7 @@
 import * as flsFunctions from './modules/functions.js';
 import { Splide } from '@splidejs/splide';
-import fslightbox from 'fslightbox';
+// import { link } from 'fs';
+// import fslightbox from 'fslightbox';
 
 flsFunctions.isWebp();
 
@@ -18,7 +19,7 @@ dropBtns.forEach((dropBtn) => {
     if (menuLink.classList.contains('menu__link--active')) {
       menuLink.classList.remove('menu__link--active');
       subMenu.classList.remove('submenu--open');
-      document.removeEventListener('click', q);
+      document.removeEventListener('click', closeSubmenu);
     } else {
       dropBtns.forEach((btn) => {
         btn.classList.remove('menu__link--active');
@@ -26,18 +27,28 @@ dropBtns.forEach((dropBtn) => {
       });
       menuLink.classList.add('menu__link--active');
       subMenu.classList.add('submenu--open');
-      document.addEventListener('click', q);
+      document.addEventListener('click', closeSubmenu);
     }
-    function q(event) {
+    function closeSubmenu(event) {
       if (!event.target.classList.contains('submenu')) {
-        console.log(event.target);
         submenus.forEach((submenu) => {
           submenu.classList.remove('submenu--open');
           submenu.previousElementSibling.classList.remove('menu__link--active');
         });
-        document.removeEventListener('click', q);
+        document.removeEventListener('click', closeSubmenu);
       }
     }
+  });
+});
+
+const submenuLinks = document.querySelectorAll('.submenu__link--submenu');
+submenuLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.target.classList.toggle('submenu__link--active');
+    e.target.nextElementSibling.classList.toggle('submenu__list--active');
+    console.log();
   });
 });
 
@@ -194,6 +205,6 @@ if (document.querySelector('.form--calc-film-price') != null) {
   });
 }
 
-flsFunctions.bindModal('.open-modal-callback', '.modal--callback', '.modal__close');
+// flsFunctions.bindModal('.open-modal-callback', '.modal--callback', '.modal__close');
 
-flsFunctions.bindModal('.open-modal-order', '.modal--order', '.modal__close');
+// flsFunctions.bindModal('.open-modal-order', '.modal--order', '.modal__close');

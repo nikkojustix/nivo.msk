@@ -20,9 +20,7 @@
   &__icon {
     width: 80px;
     height: 80px;
-
     margin-bottom: 20px;
-    background-color: var(--color-grey-200);
   }
 
   &__info {
@@ -81,5 +79,11 @@
 
 @media (max-width: 399px) {
   .pros {
+    &__icon {
+      margin-bottom: 10px;
+    }
+    &__name {
+      margin-bottom: 0;
+    }
   }
 }

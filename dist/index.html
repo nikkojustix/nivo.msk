@@ -24,22 +24,29 @@
               <button class="submenu__btn">Каталог</button>
               <ul class="submenu__list">
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Механические наконечники</a>
+                  <a class="submenu__link submenu__link--submenu" href="#">Наконечники</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Турбинные наконечники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Механические наконечники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Микромоторы и переходники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Хирургия</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Микрохирургия</a></li>
+                  </ul>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Турбинные наконечники</a>
+                  <a class="submenu__link submenu__link--submenu" href="#">Прочее оборудование</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Аппаратная чистка Airflow</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Полимеризационные лампы</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Эндомоторы</a></li>
+                  </ul>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Микрохирургия</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Хирургия</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Моторы</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Переходники</a>
+                  <a class="submenu__link submenu__link--submenu" href="#">Боры</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="#">Боры диаметром 1.6 мм</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Боры диаметром 2.35 мм</a></li>
+                  </ul>
                 </li>
                 <li class="submenu__item">
                   <a class="submenu__link" href="#">Все товары</a>
@@ -120,28 +127,28 @@
     <h2 class="visually-hidden">Преимущества</h2>
     <div class="pros__items">
       <div class="pros__item">
-        <div class="pros__icon"></div>
+        <img class="pros__icon" src="img/warranty.png" alt="Гарантия 12 мясяцев" />
         <div class="pros__info">
           <span class="pros__name">Гарантия 12 мясяцев</span>
           <span class="pros__descr"></span>
         </div>
       </div>
       <div class="pros__item">
-        <div class="pros__icon"></div>
+        <img class="pros__icon" src="img/quality.png" alt="Высокое качество" />
         <div class="pros__info">
           <span class="pros__name">Высокое качество</span>
           <span class="pros__descr"></span>
         </div>
       </div>
       <div class="pros__item">
-        <div class="pros__icon"></div>
+        <img class="pros__icon" src="img/low-price.png" alt="Низкие цены" />
         <div class="pros__info">
           <span class="pros__name">Низкие цены</span>
           <span class="pros__descr"></span>
         </div>
       </div>
       <div class="pros__item">
-        <div class="pros__icon"></div>
+        <img class="pros__icon" src="img/delivery.png" alt="Бесплатная доставка" />
         <div class="pros__info">
           <span class="pros__name">Бесплатная доставка</span>
           <span class="pros__descr"></span>
@@ -187,8 +194,41 @@
   </div>
 </section>
 
-        <!-- banner -->
-        
+        <!-- feedback -->
+        <section class="feedback section">
+  <div class="container">
+    <h2 class="section__title feedback__title">Связаться с нами</h2>
+    <form class="form" action="#">
+      <div class="form__row feedback__form-row">
+        <div class="form__group">
+          <input class="form__input" type="text" name="name" id="feedback-name" placeholder="Имя" />
+          <label class="form__label" for="feedback-name">Имя*</label>
+          <div class="form__sup-text"></div>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="text" name="city" id="feedback-city" placeholder="Город" />
+          <label class="form__label" for="feedback-city">Город*</label>
+        </div>
+      </div>
+      <div class="form__row feedback__form-row">
+        <div class="form__group">
+          <input class="form__input" type="tel" name="tel" id="feedback-tel" placeholder="Телефон" />
+          <label class="form__label" for="feedback-tel">Телефон*</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="email" name="email" id="feedback-email" placeholder="Электронная почта" />
+          <label class="form__label" for="feedback-email">Электронная почта*</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <textarea class="form__input form__textarea" rows="4" name="comment" id="feedback-comment" placeholder="Комментарий"></textarea>
+        <label class="form__label" for="feedback-comment">Комментарий*</label>
+      </div>
+      <button class="btn form__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
+
         <!-- equip -->
         
         <!-- staff -->

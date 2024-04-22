@@ -50,3 +50,42 @@
     bottom: 0;
   }
 }
+
+@media (max-width: 960px) {
+  .categories {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item-title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .categories {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      height: 220px;
+      padding: 30px;
+      &:nth-child(odd) {
+        background-color: var(--color-secondary-light);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--color-primary-light);
+      }
+    }
+
+    &__item-title {
+      font-size: 22px;
+    }
+
+    &__item-img {
+      height: 140px;
+    }
+  }
+}

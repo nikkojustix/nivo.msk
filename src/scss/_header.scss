@@ -89,33 +89,6 @@
       border-bottom-color: var(--color-primary);
     }
   }
-
-  &__submenu-list {
-    position: absolute;
-    top: 100%;
-    display: none;
-    flex-direction: column;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-white);
-    animation: toggle-opacity 500ms;
-  }
-
-  &__submenu-item {
-    border-top: 1px solid var(--color-lighter);
-  }
-
-  &__submenu-link {
-    display: block;
-    padding: 10px 15px;
-    color: var(--color-dark);
-    transition: 0.3s;
-    &:hover,
-    &:focus {
-      background-color: var(--color-lighter);
-    }
-  }
 }
 
 .burger {
@@ -284,29 +257,44 @@
   &__list {
     position: relative;
     list-style-type: none;
-    margin: 25px 0;
+    margin: 25px 0 60px;
     padding: 0;
     z-index: 10;
     pointer-events: none;
+    max-width: fit-content;
   }
 
   &__item {
     display: flex;
+    position: relative;
+    transition: 0.3s;
     pointer-events: none;
+
+    .submenu__list {
+      display: none;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: var(--color-grey-100);
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-primary-light);
+        & > .submenu__list {
+          display: block;
+        }
+      }
+    }
   }
 
   &__link {
+    width: 100%;
     font-size: 16px;
     line-height: 20px;
     padding: 10px 20px;
-    transition: 0.3s;
+    white-space: nowrap;
     pointer-events: all;
-
-    @media (hover: hover) {
-      &:hover {
-        color: var(--color-secondary);
-      }
-    }
   }
 }
 
@@ -378,6 +366,40 @@
     transform: translateX(-200%);
     transition: transform 0.3s;
     z-index: 10;
+
+    &__item {
+      flex-direction: column;
+      .submenu__list {
+        padding-left: 20px;
+        position: static;
+        &--active {
+          display: block;
+        }
+      }
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+
+    &__link {
+      &--submenu::after {
+        position: absolute;
+        content: '';
+        right: 20px;
+        top: 8px;
+        width: 24px;
+        height: 24px;
+        background-image: url('@img/breadcrumbs-arrow.svg');
+        transform: rotate(90deg);
+        background-size: cover;
+        transition: 0.3s;
+      }
+
+      &--active::after {
+        transform: rotate(-90deg);
+      }
+    }
 
     &--open {
       transform: translateX(0);
