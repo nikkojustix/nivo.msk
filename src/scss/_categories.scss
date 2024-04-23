@@ -49,6 +49,48 @@
     right: 0;
     bottom: 0;
   }
+
+  &__tab-title {
+    padding: 0 24px;
+    font-size: 22px;
+  }
+}
+
+.tabs {
+  &__nav {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  &__btn {
+    padding: 12px 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    font-size: inherit;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+    &--active {
+      border-bottom-color: var(--color-secondary);
+      color: var(--color-secondary);
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-secondary);
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    transition: 0.3s;
+    &--active {
+      display: block;
+      animation-name: toggle-opacity;
+      animation-duration: 0.7s;
+    }
+  }
 }
 
 @media (max-width: 960px) {
@@ -86,6 +128,10 @@
 
     &__item-img {
       height: 140px;
+    }
+    &__tab-title {
+      padding: 0 20px;
+      font-size: 18px;
     }
   }
 }

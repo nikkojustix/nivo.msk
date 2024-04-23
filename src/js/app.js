@@ -103,8 +103,8 @@ if (document.querySelector('.top__slider-img') != null && document.querySelector
   topSliderImg.mount();
 }
 
-if (document.querySelector('.top__tabs-btn') != null) {
-  flsFunctions.tabs('top__tabs-btn', 'top__tabs-item', 'active');
+if (document.querySelector('.tabs__btn') != null) {
+  flsFunctions.tabs('tabs__btn', 'tabs__item', 'active');
 }
 
 const category = document.querySelector('#category');

@@ -1,0 +1,11 @@
+.top-inner-page {
+  background-color: var(--color-primary-light);
+  &__title {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    margin: 0;
+    font-size: 32px;
+  }
+}

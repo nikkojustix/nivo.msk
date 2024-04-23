@@ -1293,9 +1293,13 @@ a {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.4;
   text-align: center;
 }
+.pros__descr {
+  display: none;
+}
+
 @media (max-width: 999px) {
   .pros__items {
     grid-template-columns: repeat(2, 1fr);
@@ -1330,6 +1334,9 @@ a {
   }
   .pros__name {
     margin-bottom: 0;
+  }
+  .pros .pros__items {
+    grid-template-columns: 1fr;
   }
 }
 .categories__items {
@@ -1375,6 +1382,43 @@ a {
   right: 0;
   bottom: 0;
 }
+.categories__tab-title {
+  padding: 0 24px;
+  font-size: 22px;
+}
+
+.tabs__nav {
+  display: flex;
+  overflow-x: auto;
+}
+.tabs__btn {
+  padding: 12px 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  font-size: inherit;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+}
+.tabs__btn--active {
+  border-bottom-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+@media (hover: hover) {
+  .tabs__btn:hover {
+    color: var(--color-secondary);
+  }
+}
+.tabs__item {
+  display: none;
+  transition: 0.3s;
+}
+.tabs__item--active {
+  display: block;
+  animation-name: toggle-opacity;
+  animation-duration: 0.7s;
+}
 
 @media (max-width: 960px) {
   .categories__items {
@@ -1404,6 +1448,10 @@ a {
   .categories__item-img {
     height: 140px;
   }
+  .categories__tab-title {
+    padding: 0 20px;
+    font-size: 18px;
+  }
 }
 .feedback__title {
   text-align: center;
@@ -1412,6 +1460,47 @@ a {
 @media (max-width: 599px) {
   .feedback__form-row {
     flex-direction: column;
+  }
+}
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.about__accent {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+.about__btn {
+  grid-column: span 2;
+  margin: 0 auto;
+}
+.about ul li {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 5px;
+}
+.about ul li::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/checkmark.svg");
+  left: -30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 999px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+  .about__img {
+    order: -1;
+  }
+  .about__btn {
+    grid-column: auto;
   }
 }
 .footer {
@@ -1554,8 +1643,21 @@ a {
     margin-top: 20px;
   }
 }
+.top-inner-page {
+  background-color: var(--color-primary-light);
+}
+.top-inner-page__title {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  margin: 0;
+  font-size: 32px;
+}
+
 .breadcrumbs {
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 .breadcrumbs__list {
   display: flex;
