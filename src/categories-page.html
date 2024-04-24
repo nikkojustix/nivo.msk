@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { "title": "Каталог" })
+  @@include('html/head.html', { "title": "Категория - Наконечники" })
   <body>
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="main">
         <!-- top -->
-        @@include('html/top-inner-page.html')
+        @@include('html/top-inner-page.html', {"title": "Наконечники"})
         <!-- breadcrumbs -->
         @@include('html/breadcrumbs.html')
         <!-- catalog -->
-        @@include('html/catalog.html')
+        @@include('html/category.html')
       </main>
 
       @@include('html/footer.html')

@@ -1655,6 +1655,12 @@ a {
   font-size: 32px;
 }
 
+@media (max-width: 767px) {
+  .top-inner-page__title {
+    font-size: 24px;
+    height: 80px;
+  }
+}
 .breadcrumbs {
   margin-bottom: 40px;
   margin-top: 20px;
@@ -1672,16 +1678,17 @@ a {
   font-size: 15px;
   margin-right: 10px;
   white-space: nowrap;
+  color: var(--color-grey-300);
 }
 .breadcrumbs__link {
   position: relative;
   display: block;
   padding: 0 30px 0 0;
-  color: var(--color-gray3);
+  color: var(--color-black);
   transition: 0.3s;
 }
 .breadcrumbs__link:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .breadcrumbs__link::after {
   position: absolute;
@@ -1719,9 +1726,14 @@ a {
     height: 20px;
   }
 }
+@media (max-width: 479px) {
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+}
 .catalog__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 .catalog__item {
@@ -1743,21 +1755,26 @@ a {
 .catalog__item-content {
   padding: 20px;
   background-color: var(--color-white);
+  height: 100%;
 }
 .catalog__item-title {
-  margin: 0 0 16px;
-  font-size: 18px;
+  margin: 0 0 12px;
+  font-size: 16px;
   font-weight: 400;
   transition: 0.3s;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .catalog__item-price {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   transition: 0.3s;
 }
 .catalog__item-descr {
-  font-size: 15px;
+  font-size: 14px;
   margin: 0;
   font-weight: 300;
   display: -webkit-box;
@@ -1766,6 +1783,33 @@ a {
   -webkit-line-clamp: 4;
 }
 
+@media (max-width: 767px) {
+  .catalog__items {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .catalog__item-content {
+    padding: 10px;
+  }
+  .catalog__item-descr {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .catalog__items {
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: 16px 10px;
+  }
+  .catalog__item-title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 15px;
+  }
+  .catalog__item-price {
+    font-size: 17px;
+  }
+}
 .recommended {
   margin-bottom: 80px;
 }
