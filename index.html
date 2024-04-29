@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head class="smooth-scroll">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20240429133656" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.svg" alt="Логотип" />
+      </a>
+      <nav class="menu header__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--submenu" href="#">Каталог</a>
+            <div class="submenu">
+              <button class="submenu__btn">Каталог</button>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Наконечники</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Турбинные наконечники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Механические наконечники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Микромоторы и переходники</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Хирургия</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Микрохирургия</a></li>
+                  </ul>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Прочее оборудование</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Аппаратная чистка Airflow</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Полимеризационные лампы</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Эндомоторы</a></li>
+                  </ul>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Боры</a>
+                  <ul class="submenu__list">
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Боры диаметром 1.6 мм</a></li>
+                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Боры диаметром 2.35 мм</a></li>
+                  </ul>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Все товары</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--submenu" href="#">Покупателям</a>
+            <div class="submenu">
+              <button class="submenu__btn">Покупателям</button>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Оставить заявку на покупку</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Акции</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Обслуживание</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Гарантия и ремонт</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Найти магазин</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Обратная связь</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Бренд</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <nav class="header__links">
+          <a class="header__links-item" href="#">
+            <span class="header__links-text">Найти магазин</span>
+            <svg class="header__links-icon" viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite.svg#map" x="0" y="0"></use>
+            </svg>
+          </a>
+          <a class="header__links-item" href="#">
+            <span class="header__links-text">Стать партнером</span>
+            <svg class="header__links-icon" viewBox="0 0 24 24" width="24" height="24">
+              <use href="img/sprite.svg#partners" x="0" y="0"></use>
+            </svg>
+          </a>
+        </nav>
+        <button class="burger">
+          <span class="burger__btn-inner"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <!-- top -->
+        <section class="top">
+  <div class="container">
+    <div class="top__inner">
+      <h1 class="top__title">Наконечники NIVO</h1>
+      <p class="top__descr">Стоматологические материалы и оборудование</p>
+      <button class="btn top__btn">Перейти в каталог</button>
+    </div>
+  </div>
+</section>
+
+        <!-- pros -->
+        <section class="pros">
+  <div class="container">
+    <h2 class="visually-hidden">Преимущества</h2>
+    <div class="pros__items">
+      <div class="pros__item">
+        <picture><source srcset="img/quality.webp" type="image/webp"><img class="pros__icon" src="img/quality.png" alt="Высокое качество" /></picture>
+        <div class="pros__info">
+          <span class="pros__name">Высокое качество продукта</span>
+          <span class="pros__descr"
+            >японские керамические подшипники, усиленная цанга до 28 N, высокие стандарты сборки и контроля качества. Контроль качества
+            проходит более 10 проверок, включая проверки на шум, силу хвата бора, давления воды и воздуха, рабочего давления, а также
+            стандартов ISO9168 и ISO1797-1</span
+          >
+        </div>
+      </div>
+      <div class="pros__item">
+        <picture><source srcset="img/warranty.webp" type="image/webp"><img class="pros__icon" src="img/warranty.png" alt="Гарантия 12 мясяцев" /></picture>
+        <div class="pros__info">
+          <span class="pros__name">Безусловная гарантия 12 месяцев со дня продажи</span>
+          <span class="pros__descr"
+            >принимаем в гарантию в любом состоянии за исключением механических повреждений. Используем только оригинальные заводские
+            компоненты. Диагностика и распаковка происходит на видео, благодаря чему вы всегда можете быть уверены в истиной причине
+            поломки. Доставка от вас до нас и обратно происходит за наш счет. Во время гарантийного периода вы ничего не платите.</span
+          >
+        </div>
+      </div>
+      <div class="pros__item">
+        <picture><source srcset="img/low-price.webp" type="image/webp"><img class="pros__icon" src="img/low-price.png" alt="Низкие цены" /></picture>
+        <div class="pros__info">
+          <span class="pros__name">Надежный и специализированный партнер</span>
+          <span class="pros__descr"
+            >мы более 3 лет являемся представителем завода наконечников NIVO на российском рынке, разбираемся в технике «от А до Я» и не
+            занимаемся ничем другим. На всё наше оборудование у нас заготовлены любые запчасти, а в штате находится инженер. Благодаря чему
+            мы никогда не оставим наедине с проблемами. Всегда рады провести бесплатную консультацию по эксплуатации либо техническим
+            особенностям нашей продукции</span
+          >
+        </div>
+      </div>
+      <div class="pros__item">
+        <picture><source srcset="img/delivery.webp" type="image/webp"><img class="pros__icon" src="img/delivery.png" alt="Бесплатная доставка" /></picture>
+        <div class="pros__info">
+          <span class="pros__name">Широкий ассортимент</span>
+          <span class="pros__descr"
+            >у нас большой выбор наконечников (более 50 моделей) практически для любого направления работ, будь то терапия, ортопедия,
+            гигиена, хирургия либо микрохирургия. И еще более широкий ассортимент запчастей к ним чтобы мы всегда могли разрешить любые
+            проблемы</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- catalog -->
+        <section class="section categories">
+  <div class="container">
+    <div class="section__title-row">
+      <h2 class="section__title section__title--in-row">Категории товаров</h2>
+      <a class="btn categories__btn" href="#">Все товары</a>
+    </div>
+    <div class="tabs">
+      <div class="tabs__nav">
+        <h3 class="categories__tab-title">
+          <button class="tabs__btn">Наконечники</button>
+        </h3>
+        <h3 class="categories__tab-title"><button class="tabs__btn">Прочее оборудование</button></h3>
+        <h3 class="categories__tab-title"><button class="tabs__btn">Боры</button></h3>
+      </div>
+      <div class="tabs__items">
+        <div class="tabs__item">
+          <div class="categories__items">
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Турбинные наконечники</h4>
+              <picture><source srcset="img/categories-img-2.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-2.png" alt="Турбинные наконечники" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Механические наконечники</h4>
+              <picture><source srcset="img/categories-img-1.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-1.png" alt="Механические наконечники" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Микромоторы и переходники</h4>
+              <picture><source srcset="img/categories-img-5.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-5.png" alt="Моторы" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Хирургия</h4>
+              <picture><source srcset="img/categories-img-3.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-3.png" alt="Хирургия" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Микрохирургия</h4>
+              <picture><source srcset="img/categories-img-4.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-4.png" alt="Микрохирургия" /></picture>
+            </a>
+          </div>
+        </div>
+        <div class="tabs__item">
+          <div class="categories__items">
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Аппаратная чистка Airflow</h4>
+              <picture><source srcset="img/categories-img-2.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-2.png" alt="Турбинные наконечники" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Полимеризационные лампы</h4>
+              <picture><source srcset="img/categories-img-1.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-1.png" alt="Механические наконечники" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Эндомоторы</h4>
+              <picture><source srcset="img/categories-img-5.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-5.png" alt="Моторы" /></picture>
+            </a>
+          </div>
+        </div>
+        <div class="tabs__item">
+          <div class="categories__items">
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Боры диаметром 1.6 мм</h4>
+              <picture><source srcset="img/categories-img-2.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-2.png" alt="Турбинные наконечники" /></picture>
+            </a>
+            <a class="categories__item" href="/category-page.html">
+              <h4 class="categories__item-title">Боры диаметром 2.35 мм</h4>
+              <picture><source srcset="img/categories-img-1.webp" type="image/webp"><img class="categories__item-img" src="img/categories-img-1.png" alt="Механические наконечники" /></picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- about -->
+        <section class="section about">
+  <div class="container">
+    <h2 class="section__title">О бренде</h2>
+    <div class="about__inner">
+      <div class="about__content">
+        <p><b>Бренд NIVO</b> – бренд наконечников одного из крупнейших заводов Китая с более чем 10 летней историей.</p>
+        Нашей основной продукцией являются:
+        <ul>
+          <li>Высокоскоростные и низкоскоростные наконечники</li>
+          <li>Наконечники для имплантации</li>
+          <li>Хирургические наконечники</li>
+          <li>Наконечники для микропил</li>
+          <li>Беспроводные эндомоторы</li>
+          <li>Все виды стоматологического оборудования и аксессуаров</li>
+        </ul>
+        <p>
+          У нас есть передовой токарный станок с ЧПУ и оборудование для производственных испытаний, а также группа опытных профессиональных
+          специалистов в области исследований и разработок. Сохраняя принцип управления
+          <span class="about__accent">«качество прежде всего. клиент прежде всего»</span>, мы будем стремиться предоставлять клиентам
+          высококачественную стоматологическую продукцию и комплексное послепродажное обслуживание
+        </p>
+      </div>
+      <picture><source srcset="img/about-img.webp" type="image/webp"><img class="about__img" src="img/about-img.jpg" alt="" /></picture>
+      <a class="btn about__btn" href="#">Подробнее о бренде</a>
+    </div>
+  </div>
+</section>
+
+        <!-- feedback -->
+        <section class="feedback section">
+  <div class="container">
+    <h2 class="section__title feedback__title">Связаться с нами</h2>
+    <form class="form" action="#">
+      <div class="form__row feedback__form-row">
+        <div class="form__group">
+          <input class="form__input" type="text" name="name" id="feedback-name" placeholder="Имя" />
+          <label class="form__label" for="feedback-name">Имя*</label>
+          <div class="form__sup-text"></div>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="text" name="city" id="feedback-city" placeholder="Город" />
+          <label class="form__label" for="feedback-city">Город*</label>
+        </div>
+      </div>
+      <div class="form__row feedback__form-row">
+        <div class="form__group">
+          <input class="form__input" type="tel" name="tel" id="feedback-tel" placeholder="Телефон" />
+          <label class="form__label" for="feedback-tel">Телефон*</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="email" name="email" id="feedback-email" placeholder="Электронная почта" />
+          <label class="form__label" for="feedback-email">Электронная почта*</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <textarea class="form__input form__textarea" rows="4" name="comment" id="feedback-comment" placeholder="Комментарий"></textarea>
+        <label class="form__label" for="feedback-comment">Комментарий*</label>
+      </div>
+      <button class="btn form__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
+
+
+        <!-- staff -->
+        
+        <!-- video -->
+        
+      </main>
+
+      <footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__items">
+      <div class="footer__item">
+        <a class="logo footer__logo" href="/">
+          <img class="logo__img" src="img/logo.svg" alt="Логотип" />
+        </a>
+        <p class="footer__copy">© <span class="current-year">2024</span> Стоматологические наконечники Nivo</p>
+        <a class="footer__policy" href="/policy">Политика конфиденциальности</a>
+      </div>
+      <div class="footer__item">
+        <p class="footer__item-title">Каталог</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Механические наконечники</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Турбинные наконечники</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Микрохирургия</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Хирургия</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Моторы</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Переходники</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Все товары</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <p class="footer__item-title">Потребителям</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Оставить заявку на покупку</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Акции</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Обслуживание</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Гарантия и ремонт</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Найти магазин</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#">Обратная связь</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <p class="footer__item-title">Контакты</p>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="https://yandex.ru/maps">г. Москва, ул. Стоматологическая, 8</a>
+          </li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="tel:+79950994324">+7 (995) 099-43-24</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="mailto:myfirdya@ya.ru">myfirdya@ya.ru</a></li>
+        </ul>
+        <div class="socials">
+          <p class="socials__title">Мы в соцсетях</p>
+          <a class="socials__link" href="https://vk.com/" target="_blank">
+            <img class="social__icon" src="img/vk.svg" alt="" />
+          </a>
+          <a class="socials__link" href="https://t.me/" target="_blank">
+            <img class="social__icon" src="img/tg.svg" alt="" />
+          </a>
+          <a class="socials__link" href="https://wa.me/" target="_blank">
+            <img class="social__icon" src="img/wa.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="footer__item footer__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac1815aeff30a198c1ac56af98c26d85e6d089a104f5823939059a222a56d0527&amp;source=constructor"
+          width="100%"
+          height="350"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- <div class="modal modal--callback">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать звонок</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--callback-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="callback-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="callback-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="callback-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="callback-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--order">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать товар</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--order-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="order-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="order-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="order-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="order-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="order-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="order-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--film">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену пленки</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--film-modal form--column" action="">
+        <select class="form__select form__input" name="film-type" id="film-type">
+          <option value="" selected disabled>Выберите тип пленки</option>
+          <option value="Полотно">Полотно</option>
+          <option value="Полурукав">Полурукав</option>
+        </select>
+        <select class="form__select form__input" name="film-thickness" id="film-thickness">
+          <option value="" disabled selected>Выберите толщину</option>
+          <option value="12.5">12,5</option>
+          <option value="15">15</option>
+          <option value="19">19</option>
+          <option value="23.5">23,5</option>
+          <option value="35">35</option>
+        </select>
+        <select class="form__select form__input" name="film-width" id="film-width">
+          <option value="" selected disabled>Укажите ширину</option>
+          <option value="200">200</option>
+          <option value="250">250</option>
+          <option value="300">300</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
+          <option value="1550">1550</option>
+          <option value="1600">1600</option>
+          <option value="1650">1650</option>
+          <option value="1700">1700</option>
+          <option value="1750">1750</option>
+          <option value="1800">1800</option>
+          <option value="1850">1850</option>
+          <option value="1900">1900</option>
+          <option value="1950">1950</option>
+          <option value="2000">2000</option>
+        </select>
+        <select class="form__select form__input" name="film-length" id="film-length">
+          <option value="" selected disabled>Укажите длину</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
+        </select>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="film-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="film-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="film-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="film-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="film-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--parts">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Узнать цену запчасти</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--parts-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-manufacturer" name="manufacturer" type="text" placeholder="Производитель" />
+          <label class="form__label" for="parts-modal-manufacturer">Производитель</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-brand" name="brand" type="text" placeholder="Марка" />
+          <label class="form__label" for="parts-modal-brand">Марка</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="parts-modal-file" name="file" type="file" placeholder="Фото шильды" />
+          <label class="form__label" for="parts-modal-file">Фото шильды</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-part" name="part" type="text" placeholder="Запчасть" />
+          <label class="form__label" for="parts-modal-part">Запчасть</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="parts-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="parts-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="parts-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="parts-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="parts-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--repair">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену ремонта</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--repair-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-brand" name="brand" type="text" placeholder="Марка оборудования" />
+          <label class="form__label" for="repair-modal-brand">Марка оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="repair-modal-file" name="file" type="file" placeholder="Фото оборудования" />
+          <label class="form__label" for="repair-modal-file">Фото оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-quantity" name="quantity" type="text" placeholder="Количество оборудования" />
+          <label class="form__label" for="repair-modal-quantity">Количество оборудования</label>
+        </div>
+
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-address" name="address" type="text" placeholder="Адрес местонахождения" />
+          <label class="form__label" for="repair-modal-address">Адрес местонахождения</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="repair-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="repair-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="repair-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="repair-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="repair-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+    </div>
+    <script src="js/app.min.js?_v=20240429133656"></script>
+  </body>
+</html>
