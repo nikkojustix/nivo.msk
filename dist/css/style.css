@@ -1078,7 +1078,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 15px 0;
+  padding: 15px 0 20px;
 }
 
 .logo__img {
