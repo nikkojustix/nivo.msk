@@ -37,7 +37,8 @@
   }
 
   &__descr {
-    display: none;
+    text-align: center;
+    // display: none;
   }
 }
 
@@ -57,12 +58,8 @@
       height: 60px;
     }
 
-    &__num {
-      font-size: 32px;
-    }
-
-    &__text {
-      font-size: 16px;
+    &__descr {
+      display: none;
     }
   }
 }

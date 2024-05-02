@@ -41,16 +41,16 @@ dropBtns.forEach((dropBtn) => {
   });
 });
 
-const submenuLinks = document.querySelectorAll('.submenu__link--submenu');
-submenuLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    e.target.classList.toggle('submenu__link--active');
-    e.target.nextElementSibling.classList.toggle('submenu__list--active');
-    console.log();
-  });
-});
+// const submenuLinks = document.querySelectorAll('.submenu__link--submenu');
+// submenuLinks.forEach((link) => {
+//   link.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     e.target.classList.toggle('submenu__link--active');
+//     e.target.nextElementSibling.classList.toggle('submenu__list--active');
+//     console.log();
+//   });
+// });
 
 document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
