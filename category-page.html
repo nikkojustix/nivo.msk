@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Подкатегория - Турбинные наконечники</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20240429133656" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20240502120647" />
 </head>
 
   <body>
@@ -13,7 +13,7 @@
       <header class="header" id="header">
   <div class="container">
     <div class="header__inner">
-      <a class="logo" href="/">
+      <a class="logo" href="./">
         <img class="logo__img" src="img/logo.svg" alt="Логотип" />
       </a>
       <nav class="menu header__menu">
@@ -24,32 +24,28 @@
               <button class="submenu__btn">Каталог</button>
               <ul class="submenu__list">
                 <li class="submenu__item">
-                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Наконечники</a>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Турбинные наконечники</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Механические наконечники</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Микромоторы и переходники</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Хирургия</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Микрохирургия</a></li>
-                  </ul>
+                  <a class="submenu__link" href="./categories-page.html">
+                    <div class="submenu__item-img">
+                      <picture><source srcset="img/categories-img-1.webp" type="image/webp"><img src="img/categories-img-1.png" alt="" /></picture>
+                    </div>
+                    <div class="submenu__item-title">Наконечники</div>
+                  </a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Прочее оборудование</a>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Аппаратная чистка Airflow</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Полимеризационные лампы</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Эндомоторы</a></li>
-                  </ul>
+                  <a class="submenu__link" href="./categories-page.html">
+                    <div class="submenu__item-img">
+                      <picture><source srcset="img/categories-img-2.webp" type="image/webp"><img src="img/categories-img-2.png" alt="" /></picture>
+                    </div>
+                    <div class="submenu__item-title">Прочее оборудование</div>
+                  </a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link submenu__link--submenu" href="/categories-page.html">Боры</a>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Боры диаметром 1.6 мм</a></li>
-                    <li class="submenu__item"><a class="submenu__link" href="/category-page.html">Боры диаметром 2.35 мм</a></li>
-                  </ul>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Все товары</a>
+                  <a class="submenu__link" href="./categories-page.html">
+                    <div class="submenu__item-img">
+                      <picture><source srcset="img/categories-img-3.webp" type="image/webp"><img src="img/categories-img-3.png" alt="" /></picture>
+                    </div>
+                    <div class="submenu__item-title">Боры</div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -63,13 +59,13 @@
                   <a class="submenu__link" href="#">Оставить заявку на покупку</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Акции</a>
-                </li>
-                <li class="submenu__item">
                   <a class="submenu__link" href="#">Обслуживание</a>
                 </li>
                 <li class="submenu__item">
                   <a class="submenu__link" href="#">Гарантия и ремонт</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Оставить заявку на гарантию</a>
                 </li>
                 <li class="submenu__item">
                   <a class="submenu__link" href="#">Найти магазин</a>
@@ -82,6 +78,9 @@
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Бренд</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Акции</a>
           </li>
         </ul>
       </nav>
@@ -123,12 +122,12 @@
     <nav class="breadcrumbs__nav">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="/">
+          <a class="breadcrumbs__link" href="./">
             <img class="breadcrumbs__home" src="img/home.svg" alt="Главная" title="Главная" />
           </a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="/categories-page.html">Наконечники</a>
+          <a class="breadcrumbs__link" href="./categories-page.html">Наконечники</a>
         </li>
         <li class="breadcrumbs__item">Турбинные наконечники</li>
       </ul>
@@ -140,7 +139,7 @@
         <section class="catalog">
   <div class="container">
     <div class="catalog__items">
-      <a class="catalog__item" href="/card-page.html">
+      <a class="catalog__item" href="./card-page.html">
         <img class="catalog__item-img" src="img/catalogue/Турбинные наконечники/t015.png" alt="" />
         <div class="catalog__item-content">
           <h2 class="catalog__item-title">T015 NIVO Турбинный наконечник</h2>
@@ -151,7 +150,7 @@
           </div>
         </div>
       </a>
-      <a class="catalog__item" href="/card-page.html">
+      <a class="catalog__item" href="./card-page.html">
         <img class="catalog__item-img" src="img/catalogue/Турбинные наконечники/t100.png" alt="" />
         <div class="catalog__item-content">
           <h2 class="catalog__item-title">T100 NIVO Турбинный наконечник</h2>
@@ -162,7 +161,7 @@
           </div>
         </div>
       </a>
-      <a class="catalog__item" href="/card-page.html">
+      <a class="catalog__item" href="./card-page.html">
         <img class="catalog__item-img" src="img/catalogue/Турбинные наконечники/t120.png" alt="" />
         <div class="catalog__item-content">
           <h2 class="catalog__item-title">T120 NIVO турбинный наконечник</h2>
@@ -560,6 +559,6 @@
 </div> -->
 
     </div>
-    <script src="js/app.min.js?_v=20240429133656"></script>
+    <script src="js/app.min.js?_v=20240502120647"></script>
   </body>
 </html>
