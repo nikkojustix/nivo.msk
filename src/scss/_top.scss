@@ -1,9 +1,4 @@
 .top {
-  background-image: url('@img/top-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: calc(100vh - 70px);
-  min-height: 650px;
   position: relative;
 
   &__inner {
@@ -22,8 +17,29 @@
   &__descr {
     font-size: 24px;
     color: var(--color-white);
-    margin: 0 0 40px;
+    margin: 0 0 60px;
     max-width: 440px;
+  }
+
+  &__pagination {
+    justify-content: flex-start;
+    gap: 10px;
+    bottom: 60px;
+    padding: 0 var(--gap);
+  }
+
+  &__pagination-btn {
+    width: 60px;
+    height: 4px;
+    border: none;
+    border-radius: 0;
+    background-color: var(--color-white);
+    opacity: 0.35;
+    &.is-active {
+      transform: none;
+      background-color: var(--color-primary);
+      width: 80px;
+    }
   }
 }
 

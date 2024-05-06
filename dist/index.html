@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20240502125554" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
   <body>
@@ -26,7 +26,7 @@
                 <li class="submenu__item">
                   <a class="submenu__link" href="./categories-page.html">
                     <div class="submenu__item-img">
-                      <picture><source srcset="img/categories-img-1.webp" type="image/webp"><img src="img/categories-img-1.png" alt="" /></picture>
+                      <img src="img/categories-img-1.png" alt="" />
                     </div>
                     <div class="submenu__item-title">Наконечники</div>
                   </a>
@@ -34,7 +34,7 @@
                 <li class="submenu__item">
                   <a class="submenu__link" href="./categories-page.html">
                     <div class="submenu__item-img">
-                      <picture><source srcset="img/categories-img-2.webp" type="image/webp"><img src="img/categories-img-2.png" alt="" /></picture>
+                      <img src="img/categories-img-2.png" alt="" />
                     </div>
                     <div class="submenu__item-title">Прочее оборудование</div>
                   </a>
@@ -42,7 +42,7 @@
                 <li class="submenu__item">
                   <a class="submenu__link" href="./categories-page.html">
                     <div class="submenu__item-img">
-                      <picture><source srcset="img/categories-img-3.webp" type="image/webp"><img src="img/categories-img-3.png" alt="" /></picture>
+                      <img src="img/categories-img-3.png" alt="" />
                     </div>
                     <div class="submenu__item-title">Боры</div>
                   </a>
@@ -68,19 +68,38 @@
                   <a class="submenu__link" href="#">Оставить заявку на гарантию</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Найти магазин</a>
-                </li>
-                <li class="submenu__item">
                   <a class="submenu__link" href="#">Обратная связь</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Бренд</a>
+            <a class="menu__link menu__link--submenu" href="#">Бренд</a>
+            <div class="submenu">
+              <button class="submenu__btn">Бренд</button>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">О бренде</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Акции</a>
+            <a class="menu__link menu__link--submenu" href="#">Акции</a>
+            <div class="submenu">
+              <button class="submenu__btn">Акции</button>
+              <ul class="submenu__list">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Акция «Старый друг»</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Акция «Вместе сильнее»</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
@@ -110,14 +129,32 @@
 
       <main class="main">
         <!-- top -->
-        <section class="top">
-  <div class="container">
-    <div class="top__inner">
-      <h1 class="top__title">Наконечники NIVO</h1>
-      <p class="top__descr">Стоматологические материалы и оборудование</p>
-      <button class="btn top__btn">Перейти в каталог</button>
-    </div>
+        <section class="top splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="img/top-bg.jpg" alt="" />
+        <div class="container">
+          <div class="top__inner">
+            <h1 class="top__title">Наконечники NIVO</h1>
+            <p class="top__descr">Стоматологические материалы и оборудование</p>
+            <button class="btn top__btn">Перейти в каталог</button>
+          </div>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <img src="img/top-bg-2.jpg" alt="" />
+        <div class="container">
+          <div class="top__inner">
+            <h2 class="top__title">Акции</h2>
+            <p class="top__descr">Наши специальные предложения</p>
+            <button class="btn top__btn">Узнать подробнее</button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
+  <ul class="splide__pagination container top__pagination"></ul>
 </section>
 
         <!-- pros -->
@@ -126,28 +163,28 @@
     <h2 class="visually-hidden">Преимущества</h2>
     <div class="pros__items">
       <div class="pros__item">
-        <picture><source srcset="img/quality.webp" type="image/webp"><img class="pros__icon" src="img/quality.png" alt="Высокое качество" /></picture>
+        <img class="pros__icon" src="img/quality.png" alt="Высокое качество" />
         <div class="pros__info">
           <span class="pros__name">Высокое качество продукта</span>
           <span class="pros__descr">Японские керамические подшипники, высокие стандарты сборки и контроля качества</span>
         </div>
       </div>
       <div class="pros__item">
-        <picture><source srcset="img/warranty.webp" type="image/webp"><img class="pros__icon" src="img/warranty.png" alt="Гарантия 12 мясяцев" /></picture>
+        <img class="pros__icon" src="img/warranty.png" alt="Гарантия 12 мясяцев" />
         <div class="pros__info">
           <span class="pros__name">Безусловная гарантия 12 месяцев со дня продажи</span>
           <span class="pros__descr">Принимаем в гарантию в любом состоянии, за исключением механических повреждений</span>
         </div>
       </div>
       <div class="pros__item">
-        <picture><source srcset="img/partners.webp" type="image/webp"><img class="pros__icon" src="img/partners.png" alt="Низкие цены" /></picture>
+        <img class="pros__icon" src="img/partners.png" alt="Низкие цены" />
         <div class="pros__info">
           <span class="pros__name">Специализированный партнер</span>
           <span class="pros__descr">Более 3 лет являемся представителем завода наконечников NIVO</span>
         </div>
       </div>
       <div class="pros__item">
-        <picture><source srcset="img/products.webp" type="image/webp"><img class="pros__icon" src="img/products.png" alt="Бесплатная доставка" /></picture>
+        <img class="pros__icon" src="img/products.png" alt="Бесплатная доставка" />
         <div class="pros__info">
           <span class="pros__name">Широкий ассортимент продукции</span>
           <span class="pros__descr">Большой выбор наконечников (более 50 моделей) и ассортимент запчастей к ним</span>
@@ -182,7 +219,7 @@
           высококачественную стоматологическую продукцию и комплексное послепродажное обслуживание
         </p>
       </div>
-      <picture><source srcset="img/about-img.webp" type="image/webp"><img class="about__img" src="img/about-img.jpg" alt="" /></picture>
+      <img class="about__img" src="img/about-img.jpg" alt="" />
       <a class="btn about__btn" href="#">Подробнее о бренде</a>
     </div>
   </div>
@@ -267,7 +304,7 @@
         <p class="footer__item-title">Контакты</p>
         <ul class="footer__menu">
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="https://yandex.ru/maps">г. Москва, ул. Стоматологическая, 8</a>
+            <a class="footer__menu-link" href="https://yandex.ru/maps/-/CDb4NQ7x" target="_blank">г. Москва, ул. Мусоргского 3</a>
           </li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="tel:+79950994324">+7 (995) 099-43-24</a></li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="mailto:myfirdya@ya.ru">myfirdya@ya.ru</a></li>
@@ -275,13 +312,13 @@
         <div class="socials">
           <p class="socials__title">Мы в соцсетях</p>
           <a class="socials__link" href="https://vk.com/" target="_blank">
-            <img class="social__icon" src="img/vk.svg" alt="" />
+            <img class="socials__icon" src="img/vk.svg" alt="" />
           </a>
           <a class="socials__link" href="https://t.me/" target="_blank">
-            <img class="social__icon" src="img/tg.svg" alt="" />
+            <img class="socials__icon" src="img/tg.svg" alt="" />
           </a>
           <a class="socials__link" href="https://wa.me/" target="_blank">
-            <img class="social__icon" src="img/wa.svg" alt="" />
+            <img class="socials__icon" src="img/wa.svg" alt="" />
           </a>
         </div>
       </div>
@@ -291,9 +328,18 @@
           width="100%"
           height="350"
           frameborder="0"
+          loading="lazy"
         ></iframe>
       </div>
     </div>
+  </div>
+  <div class="scroll-to-top">
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M30 5.62501C23.5353 5.62501 5.62499 5.62501 5.62499 5.62501C5.62499 5.62501 5.62499 23.5354 5.62499 30C5.62499 36.0612 5.62501 54.375 5.62501 54.375C5.62501 54.375 22.5999 54.375 30 54.375C38.0291 54.375 54.375 54.375 54.375 54.375C54.375 54.375 54.375 35.4309 54.375 30C54.375 24.1125 54.375 5.625 54.375 5.625C54.375 5.625 37.5736 5.62501 30 5.62501ZM40.705 30.545C40.3544 30.8969 39.8787 31.0955 39.3821 31.0973C38.8854 31.0992 38.4082 30.9042 38.055 30.555L31.875 24.425V40.0775C31.875 40.5748 31.6775 41.0517 31.3258 41.4033C30.9742 41.755 30.4973 41.9525 30 41.9525C29.5027 41.9525 29.0258 41.755 28.6742 41.4033C28.3225 41.0517 28.125 40.5748 28.125 40.0775V24.425L21.945 30.555C21.5916 30.9051 21.1136 31.1005 20.6162 31.0981C20.1187 31.0958 19.6426 30.8959 19.2925 30.5425C18.9424 30.1891 18.7471 29.7111 18.7494 29.2137C18.7517 28.7162 18.9516 28.2401 19.305 27.89L28.68 18.5875C29.0311 18.2394 29.5056 18.0441 30 18.0441C30.4944 18.0441 30.9689 18.2394 31.32 18.5875L40.695 27.89C40.8704 28.0634 41.0099 28.2696 41.1055 28.497C41.2011 28.7243 41.2509 28.9683 41.2521 29.2149C41.2533 29.4615 41.2058 29.706 41.1123 29.9342C41.0188 30.1625 40.8813 30.37 40.7075 30.545H40.705Z"
+        fill=""
+      />
+    </svg>
   </div>
 </footer>
 
@@ -558,6 +604,6 @@
 </div> -->
 
     </div>
-    <script src="js/app.min.js?_v=20240502125554"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -196,7 +196,7 @@ a {
   padding: 12px 24px;
   margin: 0;
   border: 1px solid transparent;
-  border-radius: 50px;
+  // border-radius: 50px;
   color: var(--color-white);
   background-color: var(--color-primary);
   text-decoration: none;
@@ -419,7 +419,6 @@ a {
   right: 20px;
   width: 37px;
   height: 37px;
-  border-radius: 50%;
   background: #fff;
   background: radial-gradient(circle, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
   z-index: 1000;
