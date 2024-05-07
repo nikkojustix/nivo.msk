@@ -95,6 +95,20 @@ if (document.querySelector('.top.splide') != null) {
   }).mount();
 }
 
+const tabs = document.querySelectorAll('.product__tab');
+const tabContents = document.querySelectorAll('.product__tab-content');
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    tabs.forEach((t) => t.classList.remove('product__tab--active'));
+    tab.classList.add('product__tab--active');
+
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabContents.forEach((tc) => tc.classList.remove('product__tab-content--active'));
+    target.classList.add('product__tab-content--active');
+  });
+});
+
 if (document.querySelector('.tabs__btn') != null) {
   flsFunctions.tabs('tabs__btn', 'tabs__item', 'active');
 }

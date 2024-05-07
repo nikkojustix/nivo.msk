@@ -28,6 +28,7 @@
 
     &--current {
       border-color: var(--color-secondary);
+      font-weight: 600;
     }
 
     @media (hover: hover) {
@@ -100,6 +101,55 @@
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+  }
+
+  &__pagination-btn {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    border: none;
+    // border-bottom: 2px solid transparent;
+    // border-top: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 2px;
+      background-color: transparent;
+      bottom: 6px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-grey-200);
+      }
+    }
+
+    &--current {
+      color: var(--color-secondary);
+      font-weight: 600;
+
+      &::after {
+        background-color: var(--color-secondary);
+      }
+    }
   }
 }
 
