@@ -20,6 +20,8 @@
   --color-error: #f04438;
   --color-success: #69a042;
 
+  --color-svg: var(--color-black);
+
   --shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
 
   --gap: 20px;
@@ -193,16 +195,16 @@ a {
 }
 
 .btn {
-  padding: 12px 24px;
+  padding: 16px 24px;
   margin: 0;
+  display: inline-block;
   border: 1px solid transparent;
-  // border-radius: 50px;
   color: var(--color-white);
   background-color: var(--color-primary);
   text-decoration: none;
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1;
   white-space: nowrap;
   cursor: pointer;
   transition: 0.3s;
@@ -226,6 +228,25 @@ a {
     background-color: transparent;
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
+  }
+
+  &--secondary {
+    background-color: var(--color-secondary);
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-secondary-light);
+      }
+    }
+    &:active {
+      background-color: var(--color-secondary-dark);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-secondary-dark);
+    }
+  }
+
+  &--size-sm {
+    padding: 8px 12px;
   }
 }
 
