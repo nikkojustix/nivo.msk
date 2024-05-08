@@ -84,7 +84,7 @@ if (document.querySelector('.top.splide') != null) {
   new Splide('.top', {
     type: 'loop',
     arrows: false,
-    height: 'calc(100vh - 70px)',
+    height: 'calc(100svh - 70px)',
     cover: true,
     autoplay: true,
     pauseOnFocus: true,
@@ -95,34 +95,8 @@ if (document.querySelector('.top.splide') != null) {
   }).mount();
 }
 
-const tabs = document.querySelectorAll('.product__tab');
-const tabContents = document.querySelectorAll('.product__tab-content');
-
-tabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    tabs.forEach((t) => t.classList.remove('product__tab--active'));
-    tab.classList.add('product__tab--active');
-
-    const target = document.querySelector(tab.dataset.tabTarget);
-    tabContents.forEach((tc) => tc.classList.remove('product__tab-content--active'));
-    target.classList.add('product__tab-content--active');
-  });
-});
-
-if (document.querySelector('.tabs__btn') != null) {
-  flsFunctions.tabs('tabs__btn', 'tabs__item', 'active');
-}
-
-const category = document.querySelector('#category');
-const calcCategories = document.querySelectorAll('#category ~ .form__category');
-const filmType = document.querySelector('#film-type');
-const calcFilmTypes = document.querySelectorAll('.form__film-type');
-
-if (category != null) {
-  category.addEventListener('change', () => {
-    flsFunctions.unbindModal('.open-modal-calc', '.form--calc');
-    flsFunctions.bindModal('.open-modal-calc', `.modal--${category.value}`, '.modal__close');
-  });
+if (document.querySelector('.product__tab') != null) {
+  flsFunctions.tabs('product__tab', 'product__tab-content', 'active');
 }
 
 let equipSlider;

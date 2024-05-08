@@ -65,7 +65,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   background-color: var(--color-grey-100);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -297,6 +297,7 @@ a {
     color: var(--color-black);
     background-color: transparent;
     border: 1px solid var(--color-grey-300);
+    border-radius: 0;
     transition: 0.3s;
 
     &:not(:placeholder-shown) {
