@@ -1,7 +1,4 @@
 .product {
-  &__inner {
-  }
-
   &__main {
     display: flex;
     flex-wrap: wrap;
@@ -12,9 +9,6 @@
     min-width: 400px;
     margin-right: 40px;
     margin-bottom: 40px;
-  }
-
-  &__img {
   }
 
   &__info {
@@ -47,17 +41,6 @@
     margin: 0 0 40px;
   }
 
-  &__btn {
-  }
-
-  &__add-to-cart {
-    // text-transform: uppercase;
-  }
-
-  &__tabs-wrapper {
-    // max-width: 300px;
-  }
-
   &__tabs {
     display: flex;
     border-bottom: 1px solid var(--color-grey-200);
@@ -66,6 +49,7 @@
   &__tab {
     padding: 10px 20px;
     font-size: 16px;
+    color: inherit;
     border: none;
     background: none;
     cursor: pointer;
@@ -94,6 +78,10 @@
     &__gallery {
       min-width: 280px;
       margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 24px;
     }
   }
 }

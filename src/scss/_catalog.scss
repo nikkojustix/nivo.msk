@@ -117,23 +117,7 @@
   }
 
   &__item-action {
-    display: flex;
-    align-items: center;
-  }
-
-  &__add-to-cart {
-    position: relative;
-    --color-svg: var(--color-primary-light);
-    display: flex;
-    align-items: center;
     margin-top: 10px;
-    gap: 5px;
-    z-index: 1;
-    @include hover {
-      color: var(--color-white);
-      --color-svg: var(--color-white);
-      background-color: var(--color-primary);
-    }
   }
 
   &__pagination {

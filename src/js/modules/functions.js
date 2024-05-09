@@ -26,7 +26,6 @@ export function toggleMobileMenu(e) {
 export function tabs(btnClass, itemClass, activeModifire) {
   const btns = document.querySelectorAll(`.${btnClass}`);
   const items = document.querySelectorAll(`.${itemClass}`);
-  console.log(btns);
 
   function showContent(i = 0) {
     btns[i].classList.add(`${btnClass}--${activeModifire}`);
@@ -155,4 +154,97 @@ export function unbindModal(trigger, form) {
     form.removeChild(trigger);
     form.appendChild(newBtn);
   }
+}
+
+const headerCart = document.querySelector('.header__links-item--cart');
+
+const cart = {
+  items: [],
+  get totalQuantity() {
+    return this.items.reduce(function (sum, item) {
+      return sum + item.quantity;
+    }, 0);
+  },
+  addItem: function (item) {
+    this.items.push(item);
+    this.updateCartUI();
+  },
+  updateCartUI: function () {
+    if (this.totalQuantity > 0) {
+      headerCart.classList.add('cart-not-empty');
+      headerCart.dataset.count = this.totalQuantity;
+    } else if (headerCart.classList.contains('cart-not-empty')) {
+      headerCart.classList.remove('cart-not-empty');
+    }
+    localStorage.setItem('nivo-cart', JSON.stringify(this.items));
+    console.log('Корзина обновлена. Количество товаров: ' + this.totalQuantity);
+  },
+};
+
+export function addToCart(e) {
+  const item = e.target.closest('.control');
+  const productToAdd = {
+    id: item.dataset.id,
+    name: 'name',
+    price: 10000,
+    quantity: 1,
+  };
+  cart.addItem(productToAdd);
+  headerCart.dataset.count = cart.totalQuantity;
+  showCounter(item);
+}
+
+export function increaseQuantity(e) {
+  const btn = e.target;
+  const value = btn.previousElementSibling;
+  value.value++;
+  // headerCart.dataset.count++;
+  const control = btn.closest('.control');
+  cart.items.find((item) => item.id === control.dataset.id).quantity++;
+  cart.updateCartUI();
+}
+export function decreaseQuantity(e) {
+  const btn = e.target;
+  const value = btn.nextElementSibling;
+  const control = btn.closest('.control');
+  if (value.value == 1) {
+    hideCounter(control);
+    cart.items = cart.items.filter((item) => item.id !== control.dataset.id);
+    // headerCart.dataset.count--;
+    cart.updateCartUI();
+    return;
+  }
+  value.value--;
+  // headerCart.dataset.count--;
+  cart.items.find((item) => item.id === control.dataset.id).quantity--;
+  cart.updateCartUI();
+}
+
+function showCounter(control) {
+  control.classList.add('control--show-counter');
+}
+
+function hideCounter(control) {
+  control.classList.remove('control--show-counter');
+}
+
+export function fromStorage(id) {
+  const quantity = cart.items.find((item) => item.id === id);
+  console.log(quantity);
+  if (!quantity) {
+    return null;
+  }
+
+  return quantity.quantity;
+}
+
+export function checkStorage() {
+  const ls = JSON.parse(localStorage.getItem('nivo-cart'));
+  if (ls && ls.length > 0) {
+    ls.forEach((item) => {
+      cart.addItem(item);
+    });
+    return true;
+  }
+  return false;
 }

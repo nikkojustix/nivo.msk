@@ -54,11 +54,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 1;
         color: var(--color-white);
         border-radius: 50%;
         background-color: var(--color-secondary);
+      }
+
+      @include hover {
+        color: var(--color-primary);
+        --color-svg: currentColor;
       }
     }
   }
@@ -66,6 +71,7 @@
   &__links-text {
     margin-right: 8px;
     font-weight: 500;
+    transition: 0.3s;
   }
 }
 
@@ -344,9 +350,6 @@
     @media (hover: hover) {
       &:hover {
         background-color: var(--color-primary);
-        .submenu__item-title {
-          // color: var(--color-primary);
-        }
       }
     }
   }

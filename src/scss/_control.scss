@@ -1,0 +1,80 @@
+.control {
+  position: relative;
+  display: flex;
+  max-width: 140px;
+  z-index: 1;
+
+  &--show-counter {
+    .control__add-to-cart {
+      display: none;
+    }
+    .control__minus,
+    .control__value,
+    .control__plus {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  &__add-to-cart {
+    padding: 8px 12px;
+  }
+
+  &__btn-icon,
+  &__btn-text {
+    pointer-events: none;
+  }
+
+  &__minus,
+  &__plus {
+    display: none;
+  }
+
+  &__value {
+    display: none;
+    width: 100%;
+    min-width: 40px;
+    padding: 0;
+    flex: auto;
+    appearance: textfield;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+    cursor: default;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .control {
+    &__btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    &__btn-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__value {
+      font-size: 16px;
+    }
+  }
+}
