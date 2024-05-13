@@ -1,0 +1,160 @@
+.cart {
+  &__inner {
+  }
+
+  &__items {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 40px;
+  }
+
+  &__item-img-link {
+    flex-shrink: 0;
+  }
+
+  &__item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  &__item-info {
+    margin-left: 20px;
+  }
+
+  &__item-title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__item-link {
+    display: block;
+  }
+
+  &__item-price {
+    font-weight: 300;
+  }
+
+  &__item-controls {
+  }
+
+  &__item-sum {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__item-sum-value {
+  }
+
+  &__total {
+    margin-top: 40px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    border-top: 1px solid var(--color-grey-200);
+  }
+
+  &__form-box {
+    margin: 80px auto 0;
+    padding: 40px;
+    background-color: var(--color-grey-200);
+    max-width: 800px;
+  }
+
+  &__form-title {
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  &__form-descr {
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 400px;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__btn {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 999px) {
+  .cart {
+    &__item-title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cart {
+    &__item {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__item-group {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &__item-title {
+      font-size: 18px;
+    }
+
+    &__total {
+      font-size: 20px;
+    }
+
+    &__form-box {
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    &__form-title {
+      font-size: 20px;
+    }
+  }
+}

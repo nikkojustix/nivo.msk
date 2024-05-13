@@ -5,14 +5,29 @@ import { Splide } from '@splidejs/splide';
 
 if (flsFunctions.checkStorage()) {
   const controls = document.querySelectorAll('.control');
+  const totalSumEl = document.querySelector('.cart__total-value');
+  let totalSum = 0;
   controls.forEach((control) => {
-    const quantity = flsFunctions.fromStorage(control.dataset.id);
-    if (quantity !== null) {
-      console.log(quantity);
+    const itemData = flsFunctions.fromStorage(control.dataset.id);
+    if (itemData !== null) {
       control.classList.add('control--show-counter');
-      control.querySelector('.control__value').value = quantity;
+      control.querySelector('.control__value').value = itemData.quantity;
+      if (itemData.quantity <= 1 && control.closest('.cart')) {
+        control.querySelector('.control__minus').setAttribute('disabled', 'disabled');
+      }
+      if (control.nextElementSibling) {
+        const cartItemSum = control.nextElementSibling.querySelector('.cart__item-sum-value');
+        if (cartItemSum) {
+          const sum = itemData.price * itemData.quantity;
+          cartItemSum.innerText = sum;
+          totalSum += sum;
+        }
+      }
     }
   });
+  if (totalSumEl) {
+    totalSumEl.innerHTML = totalSum;
+  }
 }
 
 flsFunctions.isWebp();
@@ -114,6 +129,7 @@ if (document.querySelector('.product__tab') != null) {
 const addToCartBtns = document.querySelectorAll('.control__add-to-cart');
 const plusBtns = document.querySelectorAll('.control__plus');
 const minusBtns = document.querySelectorAll('.control__minus');
+const removeBtns = document.querySelectorAll('.control__remove');
 
 addToCartBtns.forEach((btn) => {
   btn.addEventListener('click', flsFunctions.addToCart);
@@ -125,6 +141,10 @@ plusBtns.forEach((btn) => {
 
 minusBtns.forEach((btn) => {
   btn.addEventListener('click', flsFunctions.decreaseQuantity);
+});
+
+removeBtns.forEach((btn) => {
+  btn.addEventListener('click', flsFunctions.removeFromCart);
 });
 
 let productSlider;

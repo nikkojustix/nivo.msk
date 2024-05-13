@@ -236,6 +236,28 @@ a {
       --color-svg: var(--color-white);
       background-color: var(--color-primary);
     }
+    &:active {
+      background-color: var(--color-primary-dark);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-dark);
+    }
+  }
+
+  &--plain {
+    background-color: transparent;
+    --color-svg: var(--color-grey-300);
+    @include hover {
+      --color-svg: var(--color-secondary-light);
+      background-color: transparent;
+    }
+    &:active {
+      --color-svg: var(--color-secondary-dark);
+    }
+    &:focus-visible {
+      --color-svg: var(--color-secondary-light);
+      outline: 2px solid var(--color-secondary-light);
+    }
   }
 
   &--secondary {

@@ -157,6 +157,12 @@ export function unbindModal(trigger, form) {
 }
 
 const headerCart = document.querySelector('.header__links-item--cart');
+const totalSumEl = document.querySelector('.cart__total-value');
+// let totalSum = 0;
+// if (totalSumEl) {
+//   console.log(totalSumEl.textContent);
+//   totalSum = totalSumEl.innerText;
+// }
 
 const cart = {
   items: [],
@@ -176,6 +182,7 @@ const cart = {
     } else if (headerCart.classList.contains('cart-not-empty')) {
       headerCart.classList.remove('cart-not-empty');
     }
+
     localStorage.setItem('nivo-cart', JSON.stringify(this.items));
     console.log('Корзина обновлена. Количество товаров: ' + this.totalQuantity);
   },
@@ -185,8 +192,8 @@ export function addToCart(e) {
   const item = e.target.closest('.control');
   const productToAdd = {
     id: item.dataset.id,
-    name: 'name',
-    price: 10000,
+    name: item.dataset.name,
+    price: item.dataset.price,
     quantity: 1,
   };
   cart.addItem(productToAdd);
@@ -198,26 +205,72 @@ export function increaseQuantity(e) {
   const btn = e.target;
   const value = btn.previousElementSibling;
   value.value++;
-  // headerCart.dataset.count++;
   const control = btn.closest('.control');
-  cart.items.find((item) => item.id === control.dataset.id).quantity++;
+  const itemData = cart.items.find((item) => item.id === control.dataset.id);
+  itemData.quantity++;
+  control.querySelector('.control__minus').removeAttribute('disabled');
+  if (control.nextElementSibling) {
+    const cartItemSum = control.nextElementSibling.querySelector('.cart__item-sum-value');
+    if (cartItemSum) {
+      const sum = itemData.price * itemData.quantity;
+      cartItemSum.innerText = sum;
+    }
+  }
+  if (totalSumEl) {
+    let tmpSum = +totalSumEl.innerText;
+    tmpSum += +itemData.price;
+    totalSumEl.innerText = tmpSum;
+  }
   cart.updateCartUI();
 }
 export function decreaseQuantity(e) {
   const btn = e.target;
   const value = btn.nextElementSibling;
   const control = btn.closest('.control');
+  const itemData = cart.items.find((item) => item.id === control.dataset.id);
   if (value.value == 1) {
     hideCounter(control);
     cart.items = cart.items.filter((item) => item.id !== control.dataset.id);
-    // headerCart.dataset.count--;
     cart.updateCartUI();
     return;
   }
   value.value--;
-  // headerCart.dataset.count--;
-  cart.items.find((item) => item.id === control.dataset.id).quantity--;
+  if (value.value == 1 && control.closest('.cart')) {
+    control.querySelector('.control__minus').setAttribute('disabled', 'disabled');
+  }
+  itemData.quantity--;
+  if (control.nextElementSibling) {
+    const cartItemSum = control.nextElementSibling.querySelector('.cart__item-sum-value');
+    if (cartItemSum) {
+      const sum = itemData.price * itemData.quantity;
+      cartItemSum.innerText = sum;
+    }
+  }
+  if (totalSumEl) {
+    let tmpSum = +totalSumEl.innerText;
+    tmpSum -= +itemData.price;
+    totalSumEl.innerText = tmpSum;
+  }
   cart.updateCartUI();
+}
+
+export function removeFromCart(e) {
+  const btn = e.target;
+  const control = btn.closest('.control');
+
+  console.log(btn);
+
+  // пересчитать корзину
+  cart.items = cart.items.filter((item) => item.id !== control.dataset.id);
+  cart.updateCartUI();
+  const cartItemSum = control.nextElementSibling.querySelector('.cart__item-sum-value');
+  let itemSum = +cartItemSum.innerText;
+  let tmpSum = +totalSumEl.innerText;
+  tmpSum -= itemSum;
+  totalSumEl.innerText = tmpSum;
+
+  //убрать карточку из отображения
+  control.closest('.cart__item').remove();
 }
 
 function showCounter(control) {
@@ -229,13 +282,13 @@ function hideCounter(control) {
 }
 
 export function fromStorage(id) {
-  const quantity = cart.items.find((item) => item.id === id);
-  console.log(quantity);
-  if (!quantity) {
+  const itemData = cart.items.find((item) => item.id === id);
+  console.log(itemData);
+  if (!itemData) {
     return null;
   }
 
-  return quantity.quantity;
+  return itemData;
 }
 
 export function checkStorage() {

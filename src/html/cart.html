@@ -1,0 +1,119 @@
+<section class="cart">
+  <div class="container">
+    <div class="cart__inner">
+      <div class="cart__items">
+        <div class="cart__item">
+          <div class="cart__item-content">
+            <a class="cart__item-img-link" href="/product-page.html">
+              <img class="cart__item-img" src="@img/catalogue/Турбинные наконечники/t015.png" alt="" />
+            </a>
+            <div class="cart__item-info">
+              <h2 class="cart__item-title"><a class="cart__item-link" href="/product-page.html">T015 NIVO Турбинный наконечник</a></h2>
+              <span class="cart__item-price">8000 руб.</span>
+            </div>
+          </div>
+          <div class="cart__item-group">
+            <div class="cart__item-controls control" data-id="1" data-price="8000" data-name="T015 NIVO Турбинный наконечник">
+              <button class="btn btn--outline btn--size-sm control__btn control__minus">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-minus" x="0" y="0"></use>
+                </svg>
+              </button>
+              <input class="control__value" type="number" min="0" readonly="" value="1" />
+              <button class="btn btn--outline btn--size-sm control__btn control__plus">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-plus" x="0" y="0"></use>
+                </svg>
+              </button>
+              <button class="btn btn--plain btn--size-sm control__btn control__remove">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-trash" x="0" y="0"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cart__item-sum"><span class="cart__item-sum-value"></span> руб.</div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__item-content">
+            <a class="cart__item-img-link" href="/product-page.html">
+              <img class="cart__item-img" src="@img/catalogue/Турбинные наконечники/t120.png" alt="" />
+            </a>
+            <div class="cart__item-info">
+              <h2 class="cart__item-title"><a class="cart__item-link" href="/product-page.html">T120 NIVO Турбинный наконечник</a></h2>
+              <span class="cart__item-price">10000 руб.</span>
+            </div>
+          </div>
+          <div class="cart__item-group">
+            <div class="cart__item-controls control" data-id="3" data-price="10000" data-name="T120 NIVO Турбинный наконечник">
+              <button class="btn btn--outline btn--size-sm control__btn control__minus">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-minus" x="0" y="0"></use>
+                </svg>
+              </button>
+              <input class="control__value" type="number" min="0" readonly="" value="1" />
+              <button class="btn btn--outline btn--size-sm control__btn control__plus">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-plus" x="0" y="0"></use>
+                </svg>
+              </button>
+              <button class="btn btn--plain btn--size-sm control__btn control__remove">
+                <svg class="control__btn-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <use href="@img/sprite.svg#svg-trash" x="0" y="0"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="cart__item-sum"><span class="cart__item-sum-value"></span> руб.</div>
+          </div>
+        </div>
+        <div class="cart__total">
+          <div class="cart__total-name">ИТОГО</div>
+          <div class="cart__total-sum"><span class="cart__total-value"></span> руб.</div>
+        </div>
+      </div>
+      <div class="cart__form-box">
+        <h2 class="cart__form-title">Оформление заказа</h2>
+        <p class="cart__form-descr">
+          Для оформления заказа заполните форму и наш менеджер свяжется с вами для уточнения деталей оплаты и доставки
+        </p>
+        <form class="form" action="#">
+          <div class="form__row feedback__form-row">
+            <div class="form__group">
+              <input class="form__input" type="text" name="name" id="feedback-name" placeholder="Имя" />
+              <label class="form__label" for="feedback-name">Имя*</label>
+              <div class="form__sup-text"></div>
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="text" name="city" id="feedback-city" placeholder="Город" />
+              <label class="form__label" for="feedback-city">Город*</label>
+            </div>
+          </div>
+          <div class="form__row feedback__form-row">
+            <div class="form__group">
+              <input class="form__input" type="tel" name="tel" id="feedback-tel" placeholder="Телефон" />
+              <label class="form__label" for="feedback-tel">Телефон*</label>
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="email" name="email" id="feedback-email" placeholder="Электронная почта" />
+              <label class="form__label" for="feedback-email">Электронная почта*</label>
+            </div>
+          </div>
+          <div class="form__group">
+            <textarea class="form__input form__textarea" rows="4" name="comment" id="feedback-comment" placeholder="Комментарий"></textarea>
+            <label class="form__label" for="feedback-comment">Комментарий*</label>
+          </div>
+          <button class="btn form__btn" type="submit">Оформить заказ</button>
+        </form>
+      </div>
+      <!-- <div class="cart__empty">
+        <p class="cart__text">Ваша корзина пуста</p>
+        <p class="cart__text">Выберите товары из наших категорий:</p>
+        <div class="cart__btns">
+          <a class="btn cart__btn" href="/category-page.html">Наконечники</a>
+          <a class="btn cart__btn" href="/category-page.html">Прочее оборудование</a>
+          <a class="btn cart__btn" href="/category-page.html">Боры</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
