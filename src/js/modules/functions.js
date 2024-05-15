@@ -88,28 +88,6 @@ export function accordion() {
   });
 }
 
-export function calcPrice() {
-  const priceValue = document.querySelector('.product__price-value');
-  const costPerKilo = +priceValue.dataset.value;
-  const filmThickness = parseFloat(
-    document
-      .querySelector('h1')
-      .innerText.replace(/[^0-9,\,]/g, '')
-      .replace(',', '.')
-  );
-  const filmWidth = +document.querySelector('.form__select[name="width"]').value;
-  const filmLength = +document.querySelector('.form__select[name="length"]').value;
-  parseFloat('Полиолефиновая плёнка POLYXFILMS (полурукав 12,5 мкм)'.replace(/[^0-9,\,]/g, '').replace(',', '.'));
-
-  let price = filmWidth * filmThickness * filmLength * 0.000001 * costPerKilo;
-  if (document.querySelector('h1').innerText.includes('полурукав')) {
-    price *= 2;
-  }
-  price *= filmThickness === 35 ? 0.93 : 0.92;
-  priceValue.innerText = Math.round(price).toLocaleString() + ' руб';
-  return [filmWidth, filmLength];
-}
-
 export function bindModal(trigger, modal, close) {
   trigger = document.querySelectorAll(trigger);
   modal = document.querySelector(modal);
@@ -158,11 +136,6 @@ export function unbindModal(trigger, form) {
 
 const headerCart = document.querySelector('.header__links-item--cart');
 const totalSumEl = document.querySelector('.cart__total-value');
-// let totalSum = 0;
-// if (totalSumEl) {
-//   console.log(totalSumEl.textContent);
-//   totalSum = totalSumEl.innerText;
-// }
 
 const cart = {
   items: [],

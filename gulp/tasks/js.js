@@ -17,6 +17,9 @@ export const js = () => {
         output: {
           filename: 'app.min.js',
         },
+        optimization: {
+          minimize: false,
+        },
       })
     )
     .pipe(app.gulp.dest(app.path.build.js))

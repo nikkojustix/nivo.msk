@@ -189,29 +189,6 @@ if (document.querySelector('.product__main-image') != null && document.querySele
 
 flsFunctions.accordion();
 
-let filmOptions = [];
-
-if (document.querySelector('.form--calc-film-price') != null) {
-  const form = document.querySelector('.form--calc-film-price');
-  filmOptions = flsFunctions.calcPrice();
-  const orderModal = document.querySelector('.form--order-modal');
-  const inputWidth = document.createElement('input');
-  inputWidth.type = 'hidden';
-  inputWidth.name = 'width';
-  inputWidth.value = filmOptions[0];
-  orderModal.insertBefore(inputWidth, orderModal.firstChild);
-  const inputLength = document.createElement('input');
-  inputLength.type = 'hidden';
-  inputLength.name = 'length';
-  inputLength.value = filmOptions[1];
-  orderModal.insertBefore(inputLength, orderModal.firstChild);
-  form.addEventListener('change', () => {
-    filmOptions = flsFunctions.calcPrice();
-    inputWidth.value = filmOptions[0];
-    inputLength.value = filmOptions[1];
-  });
-}
-
 // flsFunctions.bindModal('.open-modal-callback', '.modal--callback', '.modal__close');
 
 // flsFunctions.bindModal('.open-modal-order', '.modal--order', '.modal__close');
